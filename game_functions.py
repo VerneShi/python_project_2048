@@ -19,6 +19,12 @@ def start_game():
     
     return mat
 
+# function to print the matrix line by line
+def print_matrix(mat):
+    for row in mat:
+        print(" ".join(str(cell).rjust(4) for cell in row))
+    print() 
+
 # function to add a new 2 in grid at any random empty cell
 def add_new_2(mat):
     # generate random indexes for row and column

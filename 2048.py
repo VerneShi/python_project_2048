@@ -5,11 +5,15 @@ if __name__ == '__main__':
     try:
         # Initialize the matrix
         mat = game_functions.start_game()
-        print(mat)
+        game_functions.print_matrix(mat)
 
         while True:
             try:
-                x = input("Press the command: ").strip().upper()
+                x = input("Press the command (W/A/S/D), Q to exit: ").strip().upper()
+                
+                if x == 'Q':
+                    print("Exiting the game. Goodbye!")
+                    break
 
                 if x not in ['W', 'A', 'S', 'D']:
                     print("Invalid Key Pressed. Please use only W, A, S, or D.")
@@ -33,7 +37,7 @@ if __name__ == '__main__':
                 # Continue the game or end it based on the game state
                 if status == 'GAME NOT OVER':
                     game_functions.add_new_2(mat)
-                    print(mat)
+                    game_functions.print_matrix(mat)
                 else:
                     print(status)
                     break
