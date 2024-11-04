@@ -6,7 +6,7 @@ def main():
         game_functions.print_matrix(mat)
 
         while True:
-            x = input("Press the command (W/A/S/D), Q to exit, R to restart: ").strip().upper()
+            x = input("Press the command, Q to exit, R to restart: ").strip().upper()
                 
             if x == 'R':
                 print("Restarting the game...")
